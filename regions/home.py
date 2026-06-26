@@ -1,6 +1,6 @@
 from nicegui import ui
 from components import page_header
-from components.catalog import catalog
+from components.bg_catalog import BoardgameSearch
 from regions.base_page import BasePage
 
 example_games = ["Catan", "Shards of infinity", "Brink", "Dune"]
@@ -32,8 +32,10 @@ class Homepage(BasePage):
     def create(self) -> None:
         @self.router.page("/")
         def home():
-            page_header(self.board_games)
+            page_header()
             ui.query('.nicegui-content').classes('absolute-full pt-0')
 
+
             with ui.scroll_area().classes('flex-grow'):
-                catalog(self.board_games)
+                # catalog(self.board_games)
+                BoardgameSearch(self.board_games)
