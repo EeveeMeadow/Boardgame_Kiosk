@@ -6,7 +6,7 @@ def page_header():
 
     menu_items = {
         'Audit': '/tools/audit',
-        'Add Games' : '/tools/add-games'
+        'Add Games' : '/tools/add_games'
     }
 
     with ui.header(elevated=False).style('background-color: #8243a8').classes('items-center justify-between h-19'):
