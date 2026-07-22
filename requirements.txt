@@ -1,0 +1,3 @@
+nicegui
+tortoise-orm[asyncpg]
+tzdata
