@@ -1,3 +1,4 @@
 nicegui
 tortoise-orm[asyncpg]
 tzdata
+python-dotenv
