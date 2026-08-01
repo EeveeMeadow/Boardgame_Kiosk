@@ -1,13 +1,15 @@
 from nicegui import ui
 
-from components import page_header
-from ..base_page import BasePage
+from components import page_header, models
+from components.audit_table import AuditTable
+from regions.base_page import BasePage
 
 
 class AuditPage(BasePage):
     def create(self) -> None:
         @self.router.page('/audit')
-        def audit_page():
+        async def audit_page():
+            games: list[models.BoardGame] = await models.BoardGame.all()
             page_header()
-            with ui.card():
-                ui.label("This is a temporary test page")
+            ui.query('.nicegui-content').classes('absolute-full pt-0')
+            AuditTable(games).a_table()

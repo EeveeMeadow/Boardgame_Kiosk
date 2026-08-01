@@ -10,7 +10,7 @@ def page_header():
     }
 
     with ui.header(elevated=False).style('background-color: #8243a8').classes('items-center justify-between h-19'):
-        ui.label('BoardGame Catalog').style("user-select: none").classes('mr-auto')
+        ui.label('BoardGame Catalog').on("click",lambda: ui.navigate.to("/")).style("user-select: none").classes('mr-auto')
         with ui.row():
             for title, target in menu_items.items():
                 ui.link(title, target).classes(replace='text-lg text-white')
