@@ -6,7 +6,7 @@ from tortoise import TortoiseConfig
 from tortoise.config import DBUrlConfig, AppConfig
 from tortoise.contrib.fastapi import register_tortoise
 
-from regions import BaseRouter
+from regions import BaseRouter 
 from regions import ToolRouter
 
 load_dotenv()

@@ -1,7 +1,7 @@
 from nicegui import ui
 
 from components import models
-from components.edit_dialog import EditCard
+from components.dialogs.edit_dialog import EditCard
 from utils.data_utils import decode_db_image
 
 

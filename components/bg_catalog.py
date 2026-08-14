@@ -1,7 +1,7 @@
 from nicegui import events, ui
 
 from components import models
-from components.game_card import GameCard
+from components.dialogs.game_card import GameCard
 
 
 class BoardgameSearch:

@@ -1,7 +1,7 @@
 from nicegui import ui
 
 from components import page_header, models
-from components.edit_dialog import EditCard
+from components.dialogs.edit_dialog import EditCard
 from components.edit_games_page import EditGamesList
 from ..base_page import BasePage
 

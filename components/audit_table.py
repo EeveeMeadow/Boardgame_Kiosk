@@ -1,7 +1,7 @@
 from nicegui import ui
 
 from components import models
-from components.audit_card import AuditCard
+from components.dialogs.audit_card import AuditCard
 
 
 class AuditTable:
