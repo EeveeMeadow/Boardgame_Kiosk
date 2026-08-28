@@ -4,15 +4,16 @@ from components import models
 from components.dialogs.edit_dialog import EditCard
 from utils.data_utils import decode_db_image
 
-
+#edit page content.
 class EditGamesList:
 
     @ui.refreshable
     async def list_of_games(self) -> None:
+        # delete button
         async def delete(game: models.BoardGame) -> None:
             await game.delete()
             self.list_of_games.refresh()
-
+        #edit button. creates edit dialog.
         async def edit(game: models.BoardGame) -> None:
             game = await EditCard(game).editable_card()
             if not game: return

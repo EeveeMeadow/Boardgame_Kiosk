@@ -6,12 +6,13 @@ def page_header():
 
     menu_items = {
         'Audit': '/tools/audit',
-        'Add Games' : '/tools/add_games'
+        'Edit Games' : '/tools/add_games'
     }
 
     with ui.header(elevated=False).style('background-color: #8243a8').classes('items-center justify-between h-19'):
         ui.label('BoardGame Catalog').on("click",lambda: ui.navigate.to("/")).style("user-select: none").classes('mr-auto')
         with ui.row():
+            # Populates the links and paths in the header bar
             for title, target in menu_items.items():
                 ui.link(title, target).classes(replace='text-lg text-white')
 

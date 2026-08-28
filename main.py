@@ -9,6 +9,7 @@ from tortoise.contrib.fastapi import register_tortoise
 from regions import BaseRouter 
 from regions import ToolRouter
 
+# load enviroment variables.
 load_dotenv()
 pg_user = getenv("PG_USER")
 pg_password = getenv("PG_PASS")
@@ -16,6 +17,7 @@ pg_host = getenv("PG_HOST")
 pg_port = getenv("PG_PORT")
 pg_db = getenv("PG_DB")
 
+#load database access
 register_tortoise(
         app,
         config=TortoiseConfig(

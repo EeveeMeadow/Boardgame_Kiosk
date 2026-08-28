@@ -14,6 +14,7 @@ class GameCard:
             if game.thumbnail:
                 ui.image(decode_db_image(game.thumbnail)).props('fit=scale-down').classes('h-60')
 
+    # display details of selected game in dialog box
     def show_game(self, game_info: models.BoardGame):
         ui.dialog().clear()
         with ui.dialog() as dialog, ui.card().classes('w-9/12 h-10/12'):

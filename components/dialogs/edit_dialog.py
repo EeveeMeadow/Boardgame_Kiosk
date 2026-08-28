@@ -7,6 +7,7 @@ class EditCard:
     def __init__(self, game: models.BoardGame):
         self.game = game
 
+    # Save Changes to DB
     def submit(self, dialog: ui.dialog):
         if not self.game.name or self.game.name.isspace():
             ui.notify('Bad Name', type='warning')
@@ -14,6 +15,7 @@ class EditCard:
         self.game.name = self.game.name.strip()
         dialog.submit(self.game)
 
+    # Dialog box to edit/add games
     def editable_card(self) -> ui.dialog:
         ui.dialog().clear()
         with ui.dialog() as dialog, ui.card().classes('w-9/12 h-10/12'):
